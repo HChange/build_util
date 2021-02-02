@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
+  "bin":{
+    "project1":"lib/bin/project1"
+  },
+  "files": [
+    "lib/bin/rollup"
+  ],
   "scripts": {
     "dev": "rollup -c --watch --environment ENV:dev & node server.js",
     "build:dev": "rollup -c --environment",
-    "build:prod": "rollup -c --environment BUILD_ENV:prod,FORMAT:cjs"
+    "build:prod": "rollup -c --environment BUILD_ENV:prod,FORMAT:cjs",
+    "start":"lib/bin/project1"
   },
   "keywords": [],
   "author": "",
